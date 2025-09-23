@@ -6,6 +6,15 @@
 
 实现一个SysY语言的编译器，实现SysY语言到RISC-V指令集的转化
 
+### 课程基础镜像（集合了课程所需的所有的环境）
+#### 镜像地址
+[![Docker Hub](https://img.shields.io/badge/DockerHub-lorn1%2Fpc-blue)](https://hub.docker.com/r/lorn1/pc)
+#### 使用方法
+```bash
+docker pull lorn1/pc:wsl
+docker run -it lorn1/pc:wsl /bin/bash
+```
+
 ### lab01-编译器预备工作
 
 1.以GCC为研究对象，更加深入地了解语言处理系统的完整工作流程：
