@@ -1,7 +1,12 @@
+#include<iostream>
+using namespace std;
+
+#define NUM 2
 int main()
 {
     int i,n,f;
-    cin>>n;
+    //cin>>n;
+    n=NUM;
     i=2;
     f=1;
     while(i <= n)
