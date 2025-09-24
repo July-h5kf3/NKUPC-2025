@@ -1,0 +1,104 @@
+digraph "rtl" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	fn_1988_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_1988_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ \ 4:\ NOTE_INSN_BASIC_BLOCK\ 2\l\
+|\ \ \ 58:\ [--sp:DI]=bp:DI\l\
+|\ \ \ 59:\ bp:DI=sp:DI\l\
+|\ \ \ 60:\ \{sp:DI=sp:DI-0x20;clobber\ flags:CC;clobber\ [scratch];\}\l\
+|\ \ \ 61:\ NOTE_INSN_PROLOGUE_END\l\
+|\ \ \ \ 2:\ NOTE_INSN_FUNCTION_BEG\l\
+|\ \ \ \ 3:\ \{[bp:DI-0x8]=unspec[[0x28]]\ 85;ax:DI=0;clobber\ flags:CC;\}\l\
+|\ \ \ 66:\ ax:DI=bp:DI-0x14\l\
+|\ \ \ \ 7:\ si:DI=ax:DI\l\
+|\ \ \ \ 8:\ ax:DI=`_ZSt3cin'\l\
+|\ \ \ \ 9:\ di:DI=ax:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `_ZSt3cin'\l\
+|\ \ \ 10:\ ax:DI=call\ [`_ZNSirsERi']\ argc:0\l\
+|\ \ \ 11:\ [bp:DI-0x10]=0x2\l\
+|\ \ \ 12:\ [bp:DI-0xc]=0x1\l\
+|\ \ \ 55:\ pc=L20\l\
+}"];
+
+	fn_1988_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 20:\ L20:\l\
+|\ \ \ 21:\ NOTE_INSN_BASIC_BLOCK\ 4\l\
+|\ \ \ 22:\ ax:SI=[bp:DI-0x14]\l\
+|\ \ \ 24:\ flags:CCGC=cmp([bp:DI-0x10],ax:SI)\l\
+|\ \ \ 25:\ pc=\{(flags:CCGC\<=0)?L23:pc\}\l\
+}"];
+
+	fn_1988_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 26:\ NOTE_INSN_BASIC_BLOCK\ 5\l\
+|\ \ \ 27:\ ax:SI=[bp:DI-0xc]\l\
+|\ \ \ 28:\ si:SI=ax:SI\l\
+|\ \ \ 29:\ ax:DI=`_ZSt4cout'\l\
+|\ \ \ 30:\ di:DI=ax:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `_ZSt4cout'\l\
+|\ \ \ 31:\ ax:DI=call\ [`_ZNSolsEi']\ argc:0\l\
+|\ \ \ 33:\ dx:DI=[const(unspec[`_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_']\ 2)]\l\
+|\ \ \ 35:\ si:DI=dx:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_'\l\
+|\ \ \ 36:\ di:DI=ax:DI\l\
+|\ \ \ 37:\ ax:DI=call\ [`_ZNSolsEPFRSoS_E']\ argc:0\l\
+|\ \ \ 38:\ ax:SI=0\l\
+|\ \ \ 45:\ \{flags:CCZ=unspec[[bp:DI-0x8],[0x28]]\ 86;clobber\ dx:DI;\}\l\
+|\ \ \ 46:\ pc=\{(flags:CCZ==0)?L49:pc\}\l\
+}"];
+
+	fn_1988_basic_block_6 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 53:\ NOTE_INSN_BASIC_BLOCK\ 6\l\
+|\ \ \ 47:\ call\ [`__stack_chk_fail']\ argc:0\l\
+\ \ \ \ \ \ REG_ARGS_SIZE\ 0\l\
+\ \ \ \ \ \ REG_NORETURN\ 0\l\
+\ \ \ \ \ \ REG_EH_REGION\ 0\l\
+}"];
+
+	fn_1988_basic_block_7 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 49:\ L49:\l\
+|\ \ \ 54:\ NOTE_INSN_BASIC_BLOCK\ 7\l\
+|\ \ \ 51:\ use\ ax:SI\l\
+|\ \ \ 62:\ NOTE_INSN_EPILOGUE_BEG\l\
+|\ \ \ 63:\ \{sp:DI=bp:DI+0x8;bp:DI=[bp:DI];clobber\ [scratch];\}\l\
+\ \ \ \ \ \ REG_CFA_DEF_CFA\ sp:DI+0x8\l\
+|\ \ \ 64:\ simple_return\l\
+}"];
+
+	fn_1988_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 23:\ L23:\l\
+|\ \ \ 15:\ NOTE_INSN_BASIC_BLOCK\ 3\l\
+|\ \ \ 16:\ ax:SI=[bp:DI-0xc]\l\
+|\ \ \ 17:\ \{ax:SI=ax:SI*[bp:DI-0x10];clobber\ flags:CC;\}\l\
+|\ \ \ 18:\ [bp:DI-0xc]=ax:SI\l\
+|\ \ \ 19:\ \{[bp:DI-0x10]=[bp:DI-0x10]+0x1;clobber\ flags:CC;\}\l\
+}"];
+
+	fn_1988_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_1988_basic_block_0:s -> fn_1988_basic_block_2:n [style="solid,bold",color=black,weight=100,constraint=true];
+	fn_1988_basic_block_2:s -> fn_1988_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_1988_basic_block_3:s -> fn_1988_basic_block_4:n [style="dotted,bold",color=blue,weight=10,constraint=false];
+	fn_1988_basic_block_4:s -> fn_1988_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_1988_basic_block_4:s -> fn_1988_basic_block_5:n [style="solid,bold",color=black,weight=100,constraint=true];
+	fn_1988_basic_block_5:s -> fn_1988_basic_block_7:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_1988_basic_block_5:s -> fn_1988_basic_block_6:n [style="solid,bold",color=black,weight=100,constraint=true];
+	fn_1988_basic_block_7:s -> fn_1988_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_1988_basic_block_0:s -> fn_1988_basic_block_1:n [style="invis",constraint=true];
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
