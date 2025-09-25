@@ -55,6 +55,7 @@ entry:
     br i1 %cmp_m,label %sit_error,label %main_body
 
 sit_error:
+    call void @putint(i32 -1)
     br label %main_end
     
 main_body:

@@ -25,7 +25,7 @@ func main():
     if number < 0 goto L6
     goto L7
 L6:
-    call putstr("error\n")
+    call putint(-1)
     goto L8
 L7:
     result = calculateFactorial(number)
