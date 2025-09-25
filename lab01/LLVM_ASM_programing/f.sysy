@@ -18,7 +18,7 @@ int main() {
     number = getint(); 
 
     if (number < 0) {
-        putstr("error\n");
+        putint(-1);
     } else {
         int result;
         result = calculateFactorial(number);
