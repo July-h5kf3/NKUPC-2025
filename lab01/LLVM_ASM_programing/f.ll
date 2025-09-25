@@ -1,3 +1,6 @@
+declare i32 @getint()
+declare void @putint(i32)
+
 ; int calculateFactorial(int n)
 ;函数定义会以define开头，i32指的是返回类型为int
 
