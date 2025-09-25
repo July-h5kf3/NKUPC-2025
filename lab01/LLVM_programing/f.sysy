@@ -1,0 +1,29 @@
+int calculateFactorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+
+    int factorial = 1;
+    int i = 2;
+    while (i <= n) {
+        factorial = factorial * i;
+        i = i + 1;
+    }
+
+    return factorial;
+}
+
+int main() {
+    int number;
+    number = getint(); 
+
+    if (number < 0) {
+        putstr("error\n");
+    } else {
+        int result;
+        result = calculateFactorial(number);
+        putint(result);
+    }
+
+    return 0;
+}
